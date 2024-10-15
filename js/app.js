@@ -2,8 +2,9 @@ import { dice } from '../js/dice.js';
 
 const app = {
     init: function () {
-        document.getElementById("play").addEventListener("click", dice.playGame);
-        document.getElementById("stop").addEventListener("click", dice.stopGame);
+        dice.play.addEventListener("click", dice.playGame);
+        dice.stop.addEventListener("click", dice.stopGame);
+        dice.new.addEventListener("click", dice.resetGame);
     }
 }
 app.init();
