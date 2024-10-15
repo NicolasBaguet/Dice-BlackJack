@@ -22,14 +22,15 @@ export const dice = {
         dice.audio.play();
         dice.totalPlayer += dice.createDice("#player");
         document.querySelector("#score #playerScore p").textContent = `Score Joueur : ${dice.totalPlayer}`
-        if (dice.totalDealer < 17) {
+        if (dice.totalDealer < 18) {
             dice.totalDealer += dice.createDice("#dealer");
             document.querySelector("#score #dealerScore p").textContent = `Score Banque : ${dice.totalDealer}`
         }
     },
     stopGame: function () {
-        dice.play.setAttribute("disabled", "")
-        while (dice.totalDealer < 17) {
+        dice.play.setAttribute("disabled", "");
+        dice.play.style.opacity = "0.8";
+        while (dice.totalDealer < 18) {
             dice.totalDealer += dice.createDice("#dealer");
             document.querySelector("#score #dealerScore p").textContent = `Score Banque : ${dice.totalDealer}`
         }
@@ -50,11 +51,11 @@ export const dice = {
         for (const dice of allDice) {
             dice.remove();
         }
-        dice.play.removeAttribute("disabled", "")
+        dice.play.removeAttribute("disabled", "");
+        dice.play.style.opacity = "1";
         dice.totalPlayer = 0;
         dice.totalDealer = 0;
         document.querySelector("#score #dealerScore p").textContent = `Score Banque : ${dice.totalDealer}`
         document.querySelector("#score #playerScore p").textContent = `Score Joueur : ${dice.totalPlayer}`
-
     }
 }
