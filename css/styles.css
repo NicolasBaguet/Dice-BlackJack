@@ -9,16 +9,12 @@ body {
   display: flex;
 }
 
-#score {
-  background-color: rgb(204, 203, 203);
-}
-
 #player {
-  background-color: #f39c12;
+  background: linear-gradient(45deg, #b87a08, #f1af43);
 }
 
 #dealer {
-  background-color: #e67e22;
+  background: linear-gradient(45deg, #e67e22, #ffbd83);
 }
 
 .board, .score  {
@@ -30,11 +26,12 @@ body {
   align-content: center;
 }
 .score {
-  min-height: 10vh;
-  background-color: #f1e315;
+  height: 10vh;
+  background-color: #fff12f;
+  
 }
 .board {
-  min-height: 80vh;
+  height: 80vh;
 }
 audio{
   display: none;
@@ -47,19 +44,19 @@ audio{
   margin: 1em;
 }
 #gameConfig {
-  background-color: #cef367;
+  background: linear-gradient(45deg, #7ab857, #cef367);
   display: flex;
   align-content: center;
   gap: 4em;
   padding: 0.5em;
-  min-height: 10vh;
+  height: 10vh;
 }
 button{
   border-radius: 1em;
   border : none;
   cursor: pointer;
   width: 10em;
-  background-color: #44889c;
+  background: linear-gradient(45deg, #3b7688, #82a0cc);
   color: #fff;
 }
 button, .dice{

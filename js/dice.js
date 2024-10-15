@@ -22,6 +22,9 @@ export const dice = {
         dice.audio.play();
         dice.totalPlayer += dice.createDice("#player");
         document.querySelector("#score #playerScore p").textContent = `Score Joueur : ${dice.totalPlayer}`
+        if (dice.totalPlayer > 21) {
+            dice.stopGame();
+        }
         if (dice.totalDealer < 18) {
             dice.totalDealer += dice.createDice("#dealer");
             document.querySelector("#score #dealerScore p").textContent = `Score Banque : ${dice.totalDealer}`
@@ -35,11 +38,11 @@ export const dice = {
             document.querySelector("#score #dealerScore p").textContent = `Score Banque : ${dice.totalDealer}`
         }
         if (dice.totalPlayer > 21) {
-            message.show(`Et c'est perdu, tu as fait plus de 21 avec ton ${dice.totalPlayer}`, "error")
+            message.show(`Et c'est perdu ! tu as fait plus de 21 avec ton ${dice.totalPlayer}`, "error")
         } else if (dice.totalDealer > 21) {
             message.show(`Et c'est gagné ! La banque a fait plus de 21 avec son ${dice.totalDealer}`, "success")
         } else if (dice.totalDealer > dice.totalPlayer) {
-            message.show(`Et c'est perdu, la banque as fait plus que ton ${dice.totalPlayer} avec ton ${dice.totalDealer}`, "error")
+            message.show(`Et c'est perdu ! la banque as fait plus que ton ${dice.totalPlayer} avec son ${dice.totalDealer}`, "error")
         } else if (dice.totalDealer === dice.totalPlayer) {
             message.show(`Et c'est perdu, la banque as fait autant que toi avec ${dice.totalDealer}`, "error")
         } else {
