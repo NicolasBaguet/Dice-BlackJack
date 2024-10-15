@@ -2,8 +2,14 @@ body {
   background-color: #f39c12;
 }
 
-#app {
+#app, #score {
   display: flex;
+}
+
+#score {
+  background-color: rgb(204, 203, 203);
+  font-size: x-large;
+  font-weight: 900;
 }
 
 #player {
@@ -14,14 +20,19 @@ body {
   background-color: #e67e22;
 }
 
-.board {
-  min-height: 94vh;
+.board, .score  {
   width:100%;
   display:flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   align-content: center;
+}
+.score {
+  min-height: 10vh;
+}
+.board {
+  min-height: 80vh;
 }
 audio{
   display: none;
@@ -37,6 +48,7 @@ audio{
   background-color: #cef367;
   text-align: center;
   padding: 1em;
+  min-height: 10vh;
 }
 
 /*Messages popup*/
