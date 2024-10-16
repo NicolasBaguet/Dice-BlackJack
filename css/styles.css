@@ -25,14 +25,22 @@ body {
   justify-content: center;
   align-content: center;
 }
+
 .score {
   height: 10vh;
   background-color: #fff12f;
-  
 }
+
+#rules{
+  position: absolute;
+  top : 13vh;
+  left: 46vw;
+}
+
 .board {
   height: 80vh;
 }
+
 audio{
   display: none;
 }
@@ -43,6 +51,7 @@ audio{
   height: 100px;
   margin: 1em;
 }
+
 #gameConfig {
   background: linear-gradient(45deg, #7ab857, #cef367);
   display: flex;
@@ -51,15 +60,18 @@ audio{
   padding: 0.5em;
   height: 10vh;
 }
-button{
+
+button, #rules, .score div{
   border-radius: 1em;
   border : none;
   cursor: pointer;
   width: 10em;
   background: linear-gradient(45deg, #3b7688, #82a0cc);
   color: #fff;
+  padding: 0.8em;
 }
-button, .dice{
+
+button, #rules{
   box-shadow: 2px 2px 2px #000;
 }
 
