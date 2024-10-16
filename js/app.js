@@ -1,4 +1,4 @@
-import { dice } from '../js/dice.js';
+import { dice } from './dice.js';
 
 const app = {
     init: function () {

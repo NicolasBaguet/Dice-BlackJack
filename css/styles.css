@@ -39,6 +39,7 @@ body {
 
 .board {
   height: 80vh;
+  position: relative;
 }
 
 audio{
@@ -83,7 +84,7 @@ button, #rules{
   align-items: flex-end;
   gap: .5rem;
   position: fixed;
-  bottom: 1rem;
+  bottom: 2rem;
   right: 1rem;
   max-width: 30vw;
 }
@@ -112,4 +113,18 @@ button, #rules{
 .message--info {
   background-color: #52A8C2;
   border-color: #2c5a68;
+}
+
+/* Barre de vie */
+
+.healthbar{
+  position: absolute;
+  top: 0.2em;
+  width: 90%;
+  text-align: center;
+}
+.healthBarGreen{
+  width: 20/20;
+  height: 1em;
+  background-color: #1db81d;
 }
