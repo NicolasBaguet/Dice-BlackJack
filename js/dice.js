@@ -63,6 +63,11 @@ export const dice = {
             dice.looseHealthDealer();
             message.show(`Et c'est gagné ! La banque as fait moins que ton ${dice.totalPlayer} avec son ${dice.totalDealer}`, "success")
         }
+        if (dice.healthDealer === 0 || dice.healthPlayer === 0) {
+            dice.new.setAttribute("disabled", "");
+            dice.new.style.opacity = "0.7";
+            message.show(`fin de partie, recharge la page pour une nouvelle partie.`, "info", 20000)
+        }
     },
     resetGame: function () {
         const allDice = document.querySelectorAll(".dice");
