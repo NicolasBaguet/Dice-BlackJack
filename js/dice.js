@@ -28,6 +28,8 @@ export const dice = {
     },
     playGame: function () {
         dice.audio.play();
+        dice.new.setAttribute("disabled", "");
+        dice.new.style.opacity = "0.7";
         dice.totalPlayer += dice.createDice("#player");
         document.querySelector("#score #playerScore p").textContent = `Score Joueur : ${dice.totalPlayer}`
         if (dice.totalPlayer > 21 || dice.totalDealer > 21) {
@@ -43,6 +45,8 @@ export const dice = {
         dice.stop.setAttribute("disabled", "");
         dice.stop.style.opacity = "0.7";
         dice.play.style.opacity = "0.7";
+        dice.new.removeAttribute("disabled", "");
+        dice.new.style.opacity = "1";
         while (dice.totalDealer < 18) {
             dice.totalDealer += dice.createDice("#dealer");
             document.querySelector("#score #dealerScore p").textContent = `Score Banque : ${dice.totalDealer}`
